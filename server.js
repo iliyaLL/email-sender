@@ -85,7 +85,7 @@ async function sendEmail(recipient, subject, message, attachment) {
             user: process.env.EMAIL_USER,
             pass: process.env.EMAIL_PASS
         };
-        transporter.sendMail(info);
+        await transporter.sendMail(info);
         console.log('Email sent', user);
 
         return true;
