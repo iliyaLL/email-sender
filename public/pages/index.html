@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Form</title>
+    <link rel="stylesheet" href="./../css/syles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Email Form</h2>
+        <form action="/send-email" method="post" enctype="multipart/form-data">
+            <label for="recipient">Recipient:</label>
+            <input type="text" id="recipient" name="recipient" placeholder="Recipient's Email Address" required>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Email Subject" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <label for="attachment">Attachment:</label>
+            <input type="file" id="attachment" name="attachment">
+            <br><br>
+            <input type="submit" value="Send Email">
+        </form>
+    </div>
+</body>
+</html>
