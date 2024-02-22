@@ -79,9 +79,14 @@ async function sendEmail(recipient, subject, message, attachment) {
         }
 
         
-
+        const user = {
+            host: process.env.EMAIL_HOST,
+            port: process.env.EMAIL_PORT,
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
+        };
         transporter.sendMail(info);
-        console.log('Email sent');
+        console.log('Email sent', user);
 
         return true;
     } catch (err) {
